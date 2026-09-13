@@ -55,7 +55,7 @@ public class SinhVien extends Nguoi {
     @Override
     public void hienThiThongTin() {
         System.out.println("---------------------------------------------");
-        System.out.println("[THÔNG TIN SINH VIÊN]");
+        System.out.println("--THÔNG TIN SINH VIÊN--");
         System.out.println("Mã SV    : " + maSinhVien);
         super.hienThiThongTin();
         System.out.println("Ngành học: " + nganhHoc);

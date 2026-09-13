@@ -59,14 +59,12 @@ public class GiangVien extends Nguoi {
     }
 
     public void hienThiThongTin() {
-        System.out.println("---------------------------------------------");
-        System.out.println("[THÔNG TIN GIẢNG VIÊN]");
+        System.out.println("THÔNG TIN GIẢNG VIÊN--");
         System.out.println("Mã GV      : " + maGiangVien);
         super.hienThiThongTin();
         System.out.println("Chuyên môn : " + chuyenMon);
         System.out.printf("Lương cơ bản: %,.2f VNĐ\n", luongCoBan);
         System.out.printf("Hệ số lương : %.2f\n", heSoLuong);
         System.out.printf("Lương thực nhận: %,.2f VNĐ\n", tinhLuong());
-        System.out.println("---------------------------------------------");
     }
 }
