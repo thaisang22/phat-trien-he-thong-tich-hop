@@ -12,14 +12,11 @@ public class SanPham {
         this.soLuong = soLuong;
     }
 
-    void thanhTien() {
-        float thanhTien;
-        thanhTien = donGia * soLuong;
-
-        System.out.println("Thanh tien = " + thanhTien);
+    public float thanhTien() {
+        return donGia * soLuong;
     }
 
-    void infor() {
+    public void infor() {
         System.out.println("Ma: " + ma);
         System.out.println("Ten: " + ten);
         System.out.println("Don gia: " + donGia);
@@ -30,6 +27,6 @@ public class SanPham {
 
         SanPham sp = new SanPham("01", "But bi", 5000, 10);
         sp.infor();
-        sp.thanhTien();
+        System.out.println("Thanh tien = " + sp.thanhTien());
     }
 }

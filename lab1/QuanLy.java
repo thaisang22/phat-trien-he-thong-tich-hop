@@ -26,31 +26,44 @@ public class QuanLy {
             Menu();
 
             System.out.print("Nhap: ");
-            int number = sc.nextInt();
+            if (!sc.hasNext()) {
+                System.out.println("STOP");
+                break;
+            }
+
+            String luaChon = sc.next();
+            int number;
+            try {
+                number = Integer.parseInt(luaChon);
+            } catch (NumberFormatException exception) {
+                System.out.println("Lua chon phai la so nguyen!");
+                continue;
+            }
 
             switch (number) {
 
                 case 1:
                     System.out.println("Thong tin su tu:");
-                    System.out.println("Ten: " + lion.name);
-                    System.out.println("Can nang: " + lion.weight);
-                    System.out.println("Thuc an moi ngay: " + lion.eat);
+                    System.out.println("Ten: " + lion.getName());
+                    System.out.println("Can nang: " + lion.getWeight());
+                    System.out.println("Luong thuc an moi ngay: " + lion.getEat());
+                    System.out.println("So lan an moi ngay: " + lion.getEatOnDay());
                     break;
 
                 case 2:
                     System.out.println("Thong tin ran:");
-                    System.out.println("Ten: " + snake.name);
-                    System.out.println("Can nang: " + snake.weight);
-                    System.out.println("Dai: " + snake.length);
-                    System.out.println("Mot ngay an bao nhieu lan: " + snake.eatOnDay);
+                    System.out.println("Ten: " + snake.getName());
+                    System.out.println("Can nang: " + snake.getWeight());
+                    System.out.println("Dai: " + snake.getLength());
+                    System.out.println("Mot ngay an bao nhieu lan: " + snake.getEatOnDay());
                     break;
 
                 case 3:
                     System.out.println("Thong tin khi:");
-                    System.out.println("Ten: " + monkey.name);
-                    System.out.println("Can nang: " + monkey.weight);
-                    System.out.println("Thuc an yeu thich: " + monkey.foodLove);
-                    System.out.println("Mot ngay an bao nhieu lan: " + monkey.eatOnDay);
+                    System.out.println("Ten: " + monkey.getName());
+                    System.out.println("Can nang: " + monkey.getWeight());
+                    System.out.println("Thuc an yeu thich: " + monkey.getFoodLove());
+                    System.out.println("Mot ngay an bao nhieu lan: " + monkey.getEatOnDay());
                     break;
 
                 case 0:
